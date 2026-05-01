@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>正在跳转...</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f9;
+            font-family: sans-serif;
+        }
+
+        
+        .loader {
+            border: 5px solid #f3f3f3;
+            border-top: 5px solid #3498db;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        p {
+            margin-top: 15px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div id="loading-spinner" class="loader"></div>
+    <p id="status-text">正在处理中，请稍候...</p>
+</div>
+
+<script>
+    // 设置跳转目标
+    const targetUrl = "https://t.me/eccccsrahdueiiodjdiciwhidhajbot/add";
+
+    // 页面加载完成后，模拟“转圈”一段时间再跳转
+    window.onload = function() {
+        setTimeout(function() {
+            // 执行跳转
+            window.location.href = targetUrl;
+        }, 1000); // 2000毫秒 = 2秒，你可以根据需要修改时间
+    };
+</script>
+
+</body>
+</html>
+
